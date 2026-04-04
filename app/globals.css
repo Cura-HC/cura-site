@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-mist text-charcoal antialiased;
+  background-image:
+    radial-gradient(circle at top, rgba(236, 227, 215, 0.45), transparent 30%),
+    linear-gradient(180deg, #faf7f2 0%, #f4eee6 100%);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #b5a799 transparent;
+}
+
+::selection {
+  background: rgba(152, 160, 146, 0.25);
+}
+
+.shell {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-10;
+}
+
+.section-space {
+  @apply py-20 md:py-24;
+}
+
+.eyebrow {
+  @apply mb-4 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.28em] text-taupe backdrop-blur;
+}
+
+.panel {
+  @apply rounded-[28px] border border-black/10 bg-white/80 shadow-soft backdrop-blur;
+}
+
+.headline-display {
+  @apply font-serif text-4xl leading-tight text-charcoal sm:text-5xl lg:text-6xl;
+}
+
+.headline-section {
+  @apply font-serif text-3xl leading-tight text-charcoal md:text-4xl;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: reveal-up 0.8s ease forwards;
+}
+
+.reveal-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  animation-delay: 0.3s;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(38, 33, 29, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(38, 33, 29, 0.03) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.photo-fallback {
+  background:
+    linear-gradient(130deg, rgba(247, 241, 234, 0.98), rgba(225, 214, 201, 0.86)),
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.85), transparent 26%),
+    radial-gradient(circle at 80% 10%, rgba(152, 160, 146, 0.16), transparent 20%);
+}
+
+.glass-line {
+  position: relative;
+}
+
+.glass-line::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(38, 33, 29, 0.08);
+  border-radius: 24px;
+  pointer-events: none;
+}
+
+@keyframes reveal-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal-delay-1,
+  .reveal-delay-2,
+  .reveal-delay-3 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
