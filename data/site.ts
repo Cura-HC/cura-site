@@ -3,6 +3,7 @@ import { Article, Service } from "@/lib/types";
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/meet-the-provider", label: "Meet the Provider" },
   { href: "/what-we-offer", label: "What We Offer" },
   { href: "/cura-method", label: "The Cura Method" },
   { href: "/education", label: "Education" },
@@ -10,9 +11,9 @@ export const navLinks = [
 ];
 
 export const heroStats = [
-  { value: "Longer visits", label: "Space to understand your goals, history, and routine" },
-  { value: "Direct access", label: "Concierge-style communication and proactive follow-up" },
-  { value: "Evidence-informed", label: "Modern wellness and preventative care with medical oversight" }
+  { value: "Deep-Dive Consultations", label: "Comprehensive evaluations focused on root causes, not just symptoms." },
+  { value: "Direct Provider Access", label: "Ongoing guidance, proactive follow-up, and real-time support when you need it." },
+  { value: "Data-Driven Care", label: "Advanced labs, metabolic insights, and personalized protocols designed for long-term results." }
 ];
 
 export const featuredReasons = [
@@ -39,150 +40,70 @@ export const services: Service[] = [
     slug: "glp-1-medical-weight-loss",
     name: "GLP-1 / Medical Weight Loss",
     category: "Weight Loss",
-    summary: "Structured physician-guided weight loss with ongoing monitoring and behavior support.",
+    summary: "Precision-guided weight loss using GLP-1 therapy, metabolic optimization, and ongoing clinical support. Built for sustainable results, not short-term fixes.",
     description:
-      "A medically supervised program for sustainable weight reduction, body composition improvement, and metabolic support.",
-    startingAt: "$150/month",
+      "GLP-1 guided programs tailored for sustainable, clinically supervised weight loss.",
     cta: "Book Consultation",
     details: [
-      "Comprehensive intake focused on goals, appetite patterns, lifestyle, and metabolic history.",
-      "Individualized medication and habit support with thoughtful check-ins and plan adjustments.",
-      "Designed for patients who want a medically credible, high-touch approach to long-term results."
+      "Telemedicine Available",
+      "Metabolic optimization and ongoing clinical support.",
+      "Built for sustainable results, not short-term fixes."
     ]
   },
   {
     slug: "peptides",
-    name: "Peptides",
+    name: "Peptide Therapy",
     category: "Wellness",
-    summary: "Targeted peptide protocols selected through clinical context, not trend chasing.",
+    summary: "Clinically guided peptide protocols designed to support recovery, metabolism, performance, and overall health, selected based on your physiology, not trends.",
     description:
-      "A personalized approach to peptide therapies with attention to appropriateness, education, and safe use.",
-    startingAt: "$220/month",
+      "Targeted therapies to support recovery, optimize performance, and enhance cellular health.",
     cta: "Request More Information",
     details: [
-      "Used selectively based on symptoms, goals, and a broader wellness strategy.",
-      "Includes counseling around expected outcomes, monitoring, and when a peptide may not be the right fit.",
-      "Positioned as part of an evidence-aware care plan rather than a one-size-fits-all shortcut."
+      "Selected based on goals, physiology, and clinical context.",
+      "Designed to support recovery, metabolism, performance, and overall health.",
+      "Clinically guided rather than trend-driven."
     ]
   },
   {
     slug: "longevity-preventative-medicine",
-    name: "Longevity / Preventative Medicine",
+    name: "Longevity / Performance Medicine",
     category: "Wellness",
-    summary: "Forward-looking care built around early insight, prevention, and long-term vitality.",
+    summary: "Optimize energy, recovery, and long-term health through advanced diagnostics and personalized protocols designed for both longevity and peak performance.",
     description:
-      "Proactive health planning that prioritizes prevention, lifestyle refinement, and strategic follow-up over reactive care.",
-    startingAt: "$295/visit",
+      "Data-driven, proactive care focused on prevention, lifestyle optimization, and long-term health outcomes.",
     cta: "Learn More",
     details: [
-      "Risk review, health optimization planning, and lab-informed lifestyle recommendations.",
-      "Focused on sleep, recovery, nutrition, stress load, and day-to-day decisions that shape long-term health.",
-      "A strong fit for patients who want a trusted medical partner for aging well."
+      "Advanced diagnostics and personalized protocols.",
+      "Focused on energy, recovery, prevention, and long-term health.",
+      "Designed for both longevity and peak performance."
     ]
   },
   {
     slug: "concierge-primary-care",
-    name: "Concierge Primary Care",
+    name: "Direct Primary Care",
     category: "Primary Care",
-    summary: "A more direct relationship with your provider and a calmer, more attentive care experience.",
+    summary: "A direct relationship with your provider, focused on accessibility, continuity, and proactive management of your health, without the limitations of traditional care.",
     description:
-      "Primary care with longer visits, proactive guidance, and a membership structure designed around access and continuity.",
-    startingAt: "$325/month",
+      "Personalized care with extended visits, proactive management, and direct-access membership for continuity and convenience.",
     cta: "Book Now",
     details: [
-      "Same-day or next-day communication when clinically appropriate.",
-      "Care that accounts for the full picture instead of rushing through one isolated concern.",
-      "Ideal for busy professionals and families who value responsiveness, prevention, and consistency."
+      "Extended visits and proactive management.",
+      "A direct-access membership model for continuity and convenience.",
+      "Focused on accessibility, prevention, and the full picture of your health."
     ]
   },
   {
-    slug: "trigger-point-injections",
-    name: "Trigger Point Injections",
+    slug: "wellness",
+    name: "Wellness",
     category: "Wellness",
-    summary: "Targeted relief to support mobility, recovery, and comfort.",
+    summary: "Supportive wellness services designed to enhance energy, recovery, hydration, and overall vitality.",
     description:
-      "Focused treatment for muscle tension and pain patterns with a careful, clinically grounded approach.",
-    startingAt: "$180/visit",
-    cta: "Book Consultation",
-    details: [
-      "Useful for selected patients dealing with muscular pain, tension, or overuse patterns.",
-      "Integrated with a broader plan that may include recovery, movement, and lifestyle support.",
-      "Clear guidance on candidacy, expected response, and next steps."
-    ]
-  },
-  {
-    slug: "botox-filler",
-    name: "Botox / Filler",
-    category: "Aesthetics",
-    summary: "Refined aesthetic treatments that prioritize balance, natural results, and clinical judgment.",
-    description:
-      "Aesthetic care designed to complement your features with subtlety, precision, and a polished medical setting.",
-    startingAt: "$14/unit",
-    cta: "Book Consultation",
-    details: [
-      "Personalized consultation focused on your goals, anatomy, and natural expression.",
-      "Approach centers on refreshed, understated results rather than trend-driven overcorrection.",
-      "Treatment plans can be paired with broader wellness and skin-support strategies."
-    ]
-  },
-  {
-    slug: "iv-therapy",
-    name: "IV Therapy",
-    category: "Wellness",
-    summary: "Convenient supportive hydration and nutrient infusions tailored to your visit goals.",
-    description:
-      "An elevated IV experience for select wellness goals with thoughtful screening and medical oversight.",
-    startingAt: "$165/session",
+      "Supportive wellness services designed to enhance energy, recovery, hydration, and overall vitality.",
     cta: "Learn More",
     details: [
-      "Popular for hydration, recovery, travel reset, and selected wellness support contexts.",
-      "Each infusion is reviewed for appropriateness and aligned with your broader care plan.",
-      "Delivered in a calm environment that feels restorative, not rushed."
-    ]
-  },
-  {
-    slug: "hormone-therapy",
-    name: "Hormone Therapy",
-    category: "Wellness",
-    summary: "A nuanced, data-informed approach to energy, recovery, and hormone balance.",
-    description:
-      "Hormone optimization care with careful assessment, lab review, symptom tracking, and ongoing adjustments.",
-    startingAt: "$250/month",
-    cta: "Request More Information",
-    details: [
-      "Built around symptom patterns, lab context, and long-term monitoring.",
-      "Supports patients navigating fatigue, mood changes, recovery concerns, or performance plateaus.",
-      "Conversations are educational, individualized, and grounded in thoughtful follow-up."
-    ]
-  },
-  {
-    slug: "wellness-consultations",
-    name: "Wellness Consultations",
-    category: "Wellness",
-    summary: "Strategic visits for patients seeking clarity, guidance, and a personalized health roadmap.",
-    description:
-      "A focused consultation to review symptoms, goals, current routines, and possible next steps across wellness concerns.",
-    startingAt: "$195/visit",
-    cta: "Book Consultation",
-    details: [
-      "A strong starting point if you are unsure which service path fits your needs.",
-      "Designed to turn broad health goals into practical, medically informed next steps.",
-      "Often used to build a phased plan around weight, recovery, stress, hormones, or prevention."
-    ]
-  },
-  {
-    slug: "concierge-medicine-membership",
-    name: "Concierge Medicine Membership",
-    category: "Membership",
-    summary: "A premium monthly care relationship designed for access, continuity, and proactive support.",
-    description:
-      "Monthly membership for patients who want direct provider access, tailored care plans, and a higher standard of follow-through.",
-    startingAt: "$325/month",
-    cta: "Book Now",
-    details: [
-      "Smaller patient panel with an emphasis on accessibility and continuity.",
-      "Longer visits, proactive follow-up, and more room for meaningful education.",
-      "Ideal for patients who want medical guidance woven into their everyday health decisions."
+      "Designed to enhance energy, recovery, hydration, and vitality.",
+      "Reviewed for appropriateness and aligned with broader health goals.",
+      "Delivered within a calm, clinically guided care experience."
     ]
   }
 ];
@@ -225,9 +146,9 @@ export const faqs = [
       "Both. Cura blends concierge medicine, preventative care, metabolic health, and selected aesthetic and wellness services in one cohesive model."
   },
   {
-    question: "Are the prices listed online the full cost?",
+    question: "How are recommendations determined?",
     answer:
-      "The site shows starting-at pricing for planning purposes. Final recommendations and costs depend on your care plan, visit type, and clinical needs."
+      "Final recommendations depend on your goals, health history, clinical needs, and the care plan discussed with your provider."
   }
 ];
 

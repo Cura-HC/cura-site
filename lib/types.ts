@@ -11,7 +11,6 @@ export type Service = {
   category: ServiceCategory;
   description: string;
   summary: string;
-  startingAt: string;
   details: string[];
   cta: string;
 };

@@ -12,9 +12,7 @@ const categories: Array<ServiceCategory | "All"> = [
   "All",
   "Weight Loss",
   "Wellness",
-  "Aesthetics",
-  "Primary Care",
-  "Membership"
+  "Primary Care"
 ];
 
 export function ServiceBrowser() {
@@ -71,8 +69,8 @@ export function ServiceBrowser() {
                       <p className="mt-3 text-sm leading-7 text-charcoal/70">{service.description}</p>
                     </div>
                     <div className="rounded-3xl border border-black/10 bg-[#f9f6f1] px-5 py-4 lg:min-w-[180px]">
-                      <p className="text-xs uppercase tracking-[0.22em] text-charcoal/45">Starting at</p>
-                      <p className="mt-2 text-xl font-medium text-charcoal">{service.startingAt}</p>
+                      <p className="text-xs uppercase tracking-[0.22em] text-charcoal/45">Consultation First</p>
+                      <p className="mt-2 text-sm leading-6 text-charcoal/70">Personalized recommendations after clinical review</p>
                     </div>
                   </div>
                 </button>
