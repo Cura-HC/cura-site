@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/button";
 import { OfficeFrame } from "@/components/office-frame";
 import { SectionHeading } from "@/components/section-heading";
-import { heroStats, featuredReasons, services, testimonials, methodSteps, articles } from "@/data/site";
+import { contactDetails, heroStats, featuredReasons, services, testimonials, methodSteps, articles } from "@/data/site";
 
 export default function HomePage() {
   return (
@@ -185,8 +185,8 @@ export default function HomePage() {
         <div className="shell">
           <SectionHeading
             eyebrow="Patient Perspective"
-            title="Believable social proof that reflects trust, attention, and continuity."
-            description="These testimonials are realistic placeholders for future patient stories, reviews, or investor-facing proof points."
+            title="Patient perspectives rooted in trust, attention, and continuity."
+            description="Cura’s care experience is designed to feel thoughtful, accessible, and grounded in real provider-patient relationships."
             align="center"
           />
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -235,6 +235,12 @@ export default function HomePage() {
                 <p className="mt-5 max-w-2xl text-base leading-8 text-charcoal/70">
                   Whether you are exploring GLP-1 weight loss, hormone support, concierge primary care, or a broader wellness plan, Cura offers an elevated first step.
                 </p>
+                <div className="mt-6 grid gap-3 text-sm leading-7 text-charcoal/70 sm:grid-cols-2">
+                  <p>Phone: {contactDetails.phone}</p>
+                  <p>Email: {contactDetails.email}</p>
+                  <p>Location: {contactDetails.location}</p>
+                  <p>Instagram: {contactDetails.instagram}</p>
+                </div>
               </div>
               <Button href="/contact">Request Your Appointment</Button>
             </div>

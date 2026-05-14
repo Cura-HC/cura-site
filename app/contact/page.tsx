@@ -12,11 +12,11 @@ export default function ContactPage() {
         <section className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <SectionHeading
             eyebrow="Contact | Book Appointment"
-            title="A polished booking request experience that feels clear, warm, and reassuring."
-            description="This demo page is structured for future Square scheduling or secure inquiry integrations while already presenting a premium front-end experience for consultations and appointment requests."
+            title="A clear, warm first step toward personalized care."
+            description="Contact Cura Health Collective, PC for more information or to request an appointment. After requesting an appointment, you will receive appointment confirmation and next-step instructions."
           />
           <div className="panel p-6 text-sm leading-7 text-charcoal/70">
-            Square integration placeholder: embed booking flow or scheduling widget here once operational details are finalized.
+            During your visit, a licensed provider will review your health history, goals, and clinical needs to determine whether our services are appropriate for you.
           </div>
         </section>
 
@@ -28,10 +28,13 @@ export default function ContactPage() {
             <div className="panel rounded-[32px] p-8">
               <p className="text-xs uppercase tracking-[0.25em] text-taupe">Contact Information</p>
               <div className="mt-5 space-y-3 text-sm leading-7 text-charcoal/70">
-                <p>{contactDetails.address}</p>
+                <p>{contactDetails.location}</p>
                 <p>{contactDetails.phone}</p>
                 <a href={`mailto:${contactDetails.email}`} className="font-medium text-charcoal">
                   {contactDetails.email}
+                </a>
+                <a href={contactDetails.instagramHref} className="block font-medium text-charcoal">
+                  Instagram: {contactDetails.instagram}
                 </a>
               </div>
             </div>
@@ -41,11 +44,12 @@ export default function ContactPage() {
                 <li>A thoughtful first conversation centered on your goals and symptoms</li>
                 <li>Guidance on the most appropriate next steps, services, or membership path</li>
                 <li>Clear expectations around follow-up, communication, and care planning</li>
+                <li>Patient location may be confirmed as part of scheduling, intake, and visit workflows</li>
               </ul>
             </div>
             <OfficeFrame
-              title="Office and location imagery"
-              subtitle="This is a strong placement for Cura’s uploaded office photos or map-adjacent imagery that reinforces warmth, calm, and approachability."
+              title="Cura Health Collective"
+              subtitle="A calm, medical-modern care experience serving patients located in New Jersey."
             />
           </div>
         </section>
@@ -64,7 +68,7 @@ export default function ContactPage() {
           <div className="panel rounded-[32px] p-8">
             <p className="text-xs uppercase tracking-[0.25em] text-taupe">Map / Booking Embed Placeholder</p>
             <div className="mt-6 flex min-h-[360px] items-center justify-center rounded-[28px] border border-dashed border-black/10 bg-[#faf7f2] p-8 text-center text-sm leading-7 text-charcoal/60">
-              Replace this panel with a live map, Square scheduler, or location component once production integrations are ready.
+              Cura Health Collective, PC currently serves patients located in New Jersey. General location: Jersey City, NJ.
             </div>
           </div>
         </section>

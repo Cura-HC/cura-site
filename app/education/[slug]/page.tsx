@@ -33,7 +33,7 @@ export default async function EducationArticlePage({
             ))}
           </div>
           <div className="mt-10 rounded-[28px] bg-[#faf7f2] p-6 text-sm leading-7 text-charcoal/60">
-            Educational content disclaimer placeholder: this content is for informational purposes only and is not a substitute for personalized medical advice, diagnosis, or treatment.
+            This content is for informational purposes only and is not a substitute for personalized medical advice, diagnosis, or treatment.
           </div>
         </article>
       </div>

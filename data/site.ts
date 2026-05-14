@@ -352,15 +352,13 @@ export const articles: Article[] = [
 ];
 
 export const contactDetails = {
-  phone: "(555) 248-2872",
-  email: "hello@curawellness.com",
-  address: "1280 Oak & Stone Blvd, Suite 210, Your City, ST 00000"
+  phone: "551-310-4708",
+  email: "health@cura-hc.com",
+  location: "Jersey City, NJ",
+  instagram: "@curahealthcollective",
+  instagramHref: "https://www.instagram.com/curahealthcollective/"
 };
 
 export const socialLinks = [
-  { label: "Instagram", href: "#" },
-  { label: "Facebook", href: "#" },
-  { label: "TikTok", href: "#" },
-  { label: "YouTube", href: "#" },
-  { label: "LinkedIn", href: "#" }
+  { label: "Instagram: @curahealthcollective", href: "https://www.instagram.com/curahealthcollective/" }
 ];

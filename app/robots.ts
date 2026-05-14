@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/"
     },
-    sitemap: "https://curawellness.com/sitemap.xml"
+    sitemap: "https://cura-hc.com/sitemap.xml"
   };
 }

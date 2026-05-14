@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { articles, navLinks } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://curawellness.com";
+  const baseUrl = "https://cura-hc.com";
   const generatedOn = new Date("2026-04-04");
 
   const staticRoutes = navLinks.map((link) => ({

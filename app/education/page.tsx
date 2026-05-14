@@ -10,10 +10,10 @@ export default function EducationPage() {
           <SectionHeading
             eyebrow="Education"
             title="A premium resource hub for thoughtful wellness and preventative care content."
-            description="The Cura education center is structured like a modern editorial platform with searchable content categories, realistic sample posts, and room for future CMS integration."
+            description="The Cura education center offers thoughtful, general wellness and preventative care content for patients who want clear, responsible information."
           />
           <div className="panel p-6 text-sm leading-7 text-charcoal/70">
-            CMS integration placeholder: swap the static article dataset for a future headless CMS or editorial workflow without changing the page structure.
+            Educational content is for general information only and does not replace individualized medical advice, diagnosis, or treatment.
           </div>
         </section>
 

@@ -46,9 +46,9 @@ export function OfficeFrame({ title, subtitle, imageSrc, imageAlt = "Cura Health
       <div className="absolute bottom-8 right-8 h-24 w-24 rounded-full border border-black/10 bg-white/30 blur-[2px]" />
       <div className="relative flex min-h-[320px] flex-col justify-between">
         <div className="max-w-xs rounded-3xl border border-black/10 bg-white/60 p-4 backdrop-blur">
-          <p className="text-xs uppercase tracking-[0.28em] text-taupe">Office Photography Ready</p>
+          <p className="text-xs uppercase tracking-[0.28em] text-taupe">Cura Health Collective</p>
           <p className="mt-2 text-sm leading-6 text-charcoal/70">
-            Replace this panel with uploaded Cura office imagery in `public/images` when assets are available.
+            A calm, modern care environment in Jersey City, NJ.
           </p>
         </div>
         <div>

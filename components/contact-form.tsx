@@ -14,7 +14,7 @@ export function ContactForm() {
         <p className="text-xs uppercase tracking-[0.25em] text-taupe">Request Received</p>
         <h3 className="mt-4 font-serif text-3xl text-charcoal">Thank you for reaching out.</h3>
         <p className="mt-4 max-w-xl text-base leading-7 text-charcoal/70">
-          Your consultation request has been captured in this demo flow. This is the place to connect a future booking or CRM integration for Cura.
+          Your request has been received. Cura Health Collective, PC will follow up with appointment confirmation and next-step instructions.
         </p>
       </div>
     );
@@ -68,7 +68,7 @@ export function ContactForm() {
       </label>
 
       <div className="mt-6 rounded-[24px] border border-dashed border-black/10 bg-[#faf7f2] p-4 text-sm leading-6 text-charcoal/60">
-        Future integration placeholder: connect this form to Square booking, a secure contact workflow, or a CRM once the backend stack is selected.
+        Please avoid sending sensitive medical details, payment information, or urgent concerns through this general contact form.
       </div>
 
       <button type="submit" className="mt-6 rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white transition hover:bg-black">

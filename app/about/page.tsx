@@ -37,9 +37,9 @@ export default function AboutPage() {
           <div className="panel rounded-[32px] p-8">
             <p className="text-xs uppercase tracking-[0.25em] text-taupe">Founder / Provider</p>
             <div className="mt-6 rounded-[28px] border border-dashed border-black/10 bg-[#faf7f2] p-8 text-sm leading-7 text-charcoal/60">
-              Provider headshot placeholder. Replace with physician or founder imagery and finalized biography.
+              Cura’s provider profile will highlight clinical expertise, thoughtful communication, and a relationship-centered approach to modern care.
             </div>
-            <h2 className="mt-6 font-serif text-3xl text-charcoal">Provider Name, Credentials</h2>
+            <h2 className="mt-6 font-serif text-3xl text-charcoal">Clinical Leadership</h2>
             <p className="mt-4 text-sm leading-7 text-charcoal/70">
               Cura’s provider bio should emphasize medical training, clinical expertise, modern wellness fluency, and a care philosophy rooted in relationship-centered medicine.
             </p>
@@ -67,15 +67,15 @@ export default function AboutPage() {
 
         <section className="grid gap-8 lg:grid-cols-2">
           <div className="panel p-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-taupe">Credentials Placeholder</p>
-            <h2 className="mt-4 font-serif text-3xl text-charcoal">Clinical expertise and trust-building details can live here.</h2>
+            <p className="text-xs uppercase tracking-[0.25em] text-taupe">Clinical Standards</p>
+            <h2 className="mt-4 font-serif text-3xl text-charcoal">Clinical expertise and trust-building details shape every visit.</h2>
             <p className="mt-4 text-sm leading-7 text-charcoal/70">
-              Add medical credentials, specialized training, certifications, speaking experience, media mentions, or institutional affiliations once finalized.
+              Cura emphasizes appropriate evaluation, patient education, careful follow-up, and individualized recommendations.
             </p>
           </div>
           <OfficeFrame
             title="The office as part of the brand experience"
-            subtitle="This section is intentionally photo-ready for the uploaded Cura space. Add imagery showing reception, consultation rooms, and architectural details."
+            subtitle="The Cura space is designed to reflect calm, warmth, and medical credibility from the first interaction."
           />
         </section>
       </div>
