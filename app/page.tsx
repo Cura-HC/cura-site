@@ -11,7 +11,7 @@ export default function HomePage() {
           <div>
             <span className="eyebrow reveal">Direct Personalized Medicine | Weight Loss | Peptides | Longevity</span>
             <h1 className="headline-display reveal reveal-delay-1 text-balance">
-              Proactive, individualized care for prevention, optimization, and a life lived at your best.
+              Proactive, individualized care for prevention, optimization, and a life lived at your best
             </h1>
             <p className="reveal reveal-delay-2 mt-6 max-w-2xl text-lg leading-8 text-charcoal/75">
               At Cura Health Collective, we take a proactive, whole-person approach to primary care. Our practice is built around understanding each patient deeply, addressing the root causes of disease, and providing the ongoing support needed to sustain long-term wellbeing.
