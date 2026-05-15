@@ -68,7 +68,7 @@ export function ContactForm() {
       </label>
 
       <div className="mt-6 rounded-[24px] border border-dashed border-black/10 bg-[#faf7f2] p-4 text-sm leading-6 text-charcoal/60">
-        Please avoid sending sensitive medical details, payment information, or urgent concerns through this general contact form.
+        Please avoid sending sensitive medical details, payment information, or urgent concerns through this general contact form...
       </div>
 
       <button type="submit" className="mt-6 rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white transition hover:bg-black">
