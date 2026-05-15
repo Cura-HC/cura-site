@@ -68,7 +68,7 @@ export default function ContactPage() {
           <div className="panel rounded-[32px] p-8">
             <p className="text-xs uppercase tracking-[0.25em] text-taupe">Map / Booking Embed Placeholder</p>
             <div className="mt-6 flex min-h-[360px] items-center justify-center rounded-[28px] border border-dashed border-black/10 bg-[#faf7f2] p-8 text-center text-sm leading-7 text-charcoal/60">
-              Cura Health Collective, PC currently serves patients located in New Jersey. General location: Jersey City, NJ.
+              Cura Health Collective, PC currently serves patients located in New Jersey. General location: Jersey City, NJ
             </div>
           </div>
         </section>
