@@ -20,7 +20,7 @@ export default function AboutPage() {
           </div>
           <OfficeFrame
             title="A calm environment designed around attention"
-            subtitle="Cura connects modern medical care with a warm, thoughtful experience in Jersey City, NJ."
+            subtitle="Cura connects modern medical care with a warm, thoughtful experience in Hoboken, NJ."
           />
         </section>
 

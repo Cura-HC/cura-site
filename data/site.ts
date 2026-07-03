@@ -303,7 +303,7 @@ export const articles: Article[] = [
 export const contactDetails = {
   phone: "551-310-4708",
   email: "health@cura-hc.com",
-  location: "Jersey City, NJ",
+  location: "56 Newark Street #2, Hoboken, NJ 07030",
   instagram: "@curahealthcollective",
   instagramHref: "https://www.instagram.com/curahealthcollective/",
 };

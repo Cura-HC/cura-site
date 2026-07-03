@@ -21,7 +21,7 @@ const serif = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Cura Health Collective, PC | Concierge Wellness and Modern Medical Care",
   description:
-    "Cura Health Collective, PC is a premium concierge health and wellness practice in Jersey City, NJ offering medical weight loss, longevity care, concierge primary care, aesthetics, IV therapy, hormone support, and personalized wellness consultations."
+    "Cura Health Collective, PC is a premium concierge health and wellness practice in Hoboken, NJ offering medical weight loss, longevity care, concierge primary care, aesthetics, IV therapy, hormone support, and personalized wellness consultations."
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

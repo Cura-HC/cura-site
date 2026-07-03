@@ -33,7 +33,7 @@ export default function HomePage() {
           </div>
           <OfficeFrame
             title="Welcome to Cura Health Collective"
-            subtitle="A calm, elevated clinical experience in Jersey City for direct primary care, medical wellness, and long-term vitality."
+            subtitle="A calm, elevated clinical experience in Hoboken for direct primary care, medical wellness, and long-term vitality."
             imageSrc="/images/cura-office-sign.jpeg"
             imageAlt="Cura Health Collective exterior sign"
             className="min-h-[580px]"

@@ -48,7 +48,7 @@ export function OfficeFrame({ title, subtitle, imageSrc, imageAlt = "Cura Health
         <div className="max-w-xs rounded-3xl border border-black/10 bg-white/60 p-4 backdrop-blur">
           <p className="text-xs uppercase tracking-[0.28em] text-taupe">Cura Health Collective</p>
           <p className="mt-2 text-sm leading-6 text-charcoal/70">
-            A calm, modern care environment in Jersey City, NJ.
+            A calm, modern care environment in Hoboken, NJ.
           </p>
         </div>
         <div>

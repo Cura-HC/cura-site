@@ -99,7 +99,7 @@ export default function ContactPage() {
             </p>
             <div className="mt-6 flex min-h-[360px] items-center justify-center rounded-[28px] border border-dashed border-black/10 bg-[#faf7f2] p-8 text-center text-sm leading-7 text-charcoal/60">
               Cura Health Collective, PC currently serves patients located in
-              New Jersey. General location: Jersey City, NJ
+              New Jersey. Address: 56 Newark Street #2, Hoboken, NJ 07030
             </div>
           </div>
         </section>

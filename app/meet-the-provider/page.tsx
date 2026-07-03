@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function MeetTheProviderPage() {
   return (
     <main className="section-space">
@@ -6,8 +8,14 @@ export default function MeetTheProviderPage() {
           <div className="panel rounded-[32px] p-8">
             <p className="text-xs uppercase tracking-[0.25em] text-taupe">Meet the Provider</p>
             <div className="mt-6 flex min-h-[420px] items-center justify-center rounded-[28px] border border-black/10 bg-[#faf7f2] p-8">
-              <div className="flex h-44 w-44 items-center justify-center rounded-full border border-black/10 bg-white/70 font-serif text-6xl text-charcoal shadow-float">
-                JC
+              <div className="relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-full border border-black/10 bg-white/70 shadow-float">
+                <Image
+                  src="/images/jorge-cruz-headshot.jpg"
+                  alt="Jorge Cruz, Nurse Practitioner"
+                  fill
+                  sizes="(min-width: 1024px) 46vw, 100vw"
+                  className="object-cover object-[center_20%] transition duration-700"
+                />
               </div>
             </div>
             <h1 className="mt-6 font-serif text-4xl text-charcoal">Jorge Cruz</h1>
