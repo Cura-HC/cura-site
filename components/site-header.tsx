@@ -15,7 +15,10 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/10 bg-mist/90 backdrop-blur-xl">
       <div className="shell flex h-20 items-center justify-between gap-4">
-        <Link href="/" className="font-serif text-2xl tracking-[0.08em] text-charcoal">
+        <Link
+          href="/"
+          className="font-serif text-2xl tracking-[0.08em] text-charcoal"
+        >
           Cura
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
@@ -25,7 +28,7 @@ export function SiteHeader() {
               href={link.href}
               className={cn(
                 "text-sm transition-colors hover:text-charcoal",
-                pathname === link.href ? "text-charcoal" : "text-charcoal/70"
+                pathname === link.href ? "text-charcoal" : "text-charcoal/70",
               )}
             >
               {link.label}
@@ -33,7 +36,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="hidden lg:block">
-          <Button href="/contact">Book Appointment</Button>
+          <Button href="/request-consultation">Request Consultation</Button>
         </div>
         <button
           type="button"
@@ -42,7 +45,11 @@ export function SiteHeader() {
           aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
         >
-          {open ? <CloseIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
+          {open ? (
+            <CloseIcon className="h-5 w-5" />
+          ) : (
+            <MenuIcon className="h-5 w-5" />
+          )}
         </button>
       </div>
       {open ? (
@@ -58,8 +65,8 @@ export function SiteHeader() {
                 {link.label}
               </Link>
             ))}
-            <Button href="/contact" className="justify-center">
-              Book Appointment
+            <Button href="/request-consultation" className="justify-center">
+              Request Consultation
             </Button>
           </div>
         </div>

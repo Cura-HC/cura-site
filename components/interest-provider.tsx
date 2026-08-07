@@ -19,18 +19,16 @@ export function InterestProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const stored = window.localStorage.getItem("cura-selected-services");
 
-    if (!stored) {
-      return;
-    }
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored) as string[];
 
-    try {
-      const parsed = JSON.parse(stored) as string[];
-
-      if (Array.isArray(parsed)) {
-        setSelected(parsed);
+        if (Array.isArray(parsed)) {
+          setSelected(parsed);
+        }
+      } catch {
+        window.localStorage.removeItem("cura-selected-services");
       }
-    } catch {
-      window.localStorage.removeItem("cura-selected-services");
     }
 
     setHydrated(true);

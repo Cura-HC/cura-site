@@ -40,13 +40,8 @@ export function SiteFooter() {
           </div>
         </div>
         <div>
-          <h3 className="text-sm font-medium uppercase tracking-[0.22em] text-taupe">Legal + Social</h3>
+          <h3 className="text-sm font-medium uppercase tracking-[0.22em] text-taupe">Legal</h3>
           <div className="mt-5 flex flex-col gap-3 text-sm text-charcoal/70">
-            {socialLinks.map((item) => (
-              <a key={item.label} href={item.href} className="transition hover:text-charcoal">
-                {item.label}
-              </a>
-            ))}
             <Link href="/privacy-policy" className="transition hover:text-charcoal">Privacy Policy</Link>
             <Link href="/terms-and-conditions" className="transition hover:text-charcoal">Terms and Conditions</Link>
             <Link href="/medical-disclaimer" className="transition hover:text-charcoal">Medical Disclaimers</Link>

@@ -11,10 +11,7 @@ export function InterestDrawer() {
   return (
     <aside className="panel sticky top-24 p-6">
       <div className="flex items-start justify-between gap-4">
-        <div>
-          <p className="text-xs uppercase tracking-[0.25em] text-taupe">My Interests</p>
-          <h3 className="mt-2 font-serif text-2xl text-charcoal">Selected Services</h3>
-        </div>
+        <h3 className="mt-2 font-serif text-2xl text-charcoal">Consultation Summary</h3>
         {selectedServices.length > 0 ? (
           <button
             type="button"
@@ -28,8 +25,8 @@ export function InterestDrawer() {
 
       <div className="mt-6 space-y-3">
         {selectedServices.length === 0 ? (
-          <div className="rounded-3xl border border-dashed border-black/10 bg-[#fbf8f3] p-5 text-sm leading-6 text-charcoal/60">
-            Save services you want to discuss and bring them into your consultation request.
+          <div className="rounded-3xl bg-[#fbf8f3] p-5 text-sm leading-6 text-charcoal/60">
+            Select one or more services to begin.
           </div>
         ) : (
           selectedServices.map((service) => (
@@ -52,17 +49,14 @@ export function InterestDrawer() {
         )}
       </div>
 
-      <div className="mt-6 rounded-3xl bg-charcoal p-5 text-white">
-        <p className="text-sm leading-7 text-white/75">
-          Turn your saved selections into a tailored consultation request with context carried into the inquiry form.
-        </p>
+      {selectedServices.length > 0 && <div className="mt-6 rounded-3xl bg-charcoal p-5 text-white">
         <Link
-          href={`/contact${selectedServices.length ? `?services=${selectedServices.map((item) => encodeURIComponent(item.name)).join(",")}` : ""}`}
+          href="/request-consultation"
           className="mt-5 inline-flex rounded-full bg-white px-5 py-3 text-sm font-medium text-charcoal transition hover:bg-sand"
         >
           Request Consultation
         </Link>
-      </div>
+      </div>}
     </aside>
   );
 }

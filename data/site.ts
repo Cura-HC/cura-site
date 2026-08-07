@@ -3,9 +3,7 @@ import { Article, Service } from "@/lib/types";
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/meet-the-provider", label: "Meet the Provider" },
-  { href: "/what-we-offer", label: "What We Offer" },
-  { href: "/cura-method", label: "The Cura Method" },
+  { href: "/services", label: "Services" },
   // { href: "/education", label: "Education" },
   { href: "/contact", label: "Contact" },
 ];
@@ -53,79 +51,74 @@ export const featuredReasons = [
 
 export const services: Service[] = [
   {
-    slug: "glp-1-medical-weight-loss",
-    name: "GLP-1 / Medical Weight Loss",
-    category: "Weight Loss",
-    summary:
-      "Precision-guided weight loss using GLP-1 therapy, metabolic optimization, and ongoing clinical support. Built for sustainable results, not short-term fixes.",
+    slug: "concierge-primary-care",
+    name: "Direct Primary Care Membership",
+    category: "Primary Care & Wellness",
     description:
-      "GLP-1 guided programs tailored for sustainable, clinically supervised weight loss.",
-    cta: "Book Consultation",
-    details: [
-      "Telemedicine Available",
-      "Metabolic optimization and ongoing clinical support.",
-      "Built for sustainable results, not short-term fixes.",
-    ],
+      "A membership-based relationship with your provider built on extended visits, direct access, and proactive management of your long-term health.",
+  },
+  {
+    slug: "glp-1-medical-weight-loss",
+    name: "GLP-1 Medical Weight Loss",
+    category: "Primary Care & Wellness",
+    description:
+      "Clinically supervised weight loss using GLP-1 therapy, paired with metabolic support and ongoing follow-up. Telemedicine visits available.",
+  },
+  {
+    slug: "longevity-preventative-medicine",
+    name: "Longevity & Performance Medicine",
+    category: "Primary Care & Wellness",
+    description:
+      "Advanced diagnostics and personalized protocols focused on energy, recovery, prevention, and long-term health.",
   },
   {
     slug: "peptides",
     name: "Peptide Therapy",
-    category: "Wellness",
-    summary:
-      "Clinically guided peptide protocols designed to support recovery, metabolism, performance, and overall health, selected based on your physiology, not trends.",
+    category: "Primary Care & Wellness",
     description:
-      "Targeted therapies to support recovery, optimize performance, and enhance cellular health.",
-    cta: "Request More Information",
-    details: [
-      "Selected based on goals, physiology, and clinical context.",
-      "Designed to support recovery, metabolism, performance, and overall health.",
-      "Clinically guided rather than trend-driven.",
-    ],
+      "Clinically guided peptide protocols designed to support recovery, optimize performance, and enhance cellular health. Selected based on your goals and physiology.",
   },
   {
-    slug: "longevity-preventative-medicine",
-    name: "Longevity / Performance Medicine",
-    category: "Wellness",
-    summary:
-      "Optimize energy, recovery, and long-term health through advanced diagnostics and personalized protocols designed for both longevity and peak performance.",
+    slug: "iv-vitamin-therapy",
+    name: "IV & Vitamin Therapy",
+    category: "Primary Care & Wellness",
     description:
-      "Data-driven, proactive care focused on prevention, lifestyle optimization, and long-term health outcomes.",
-    cta: "Learn More",
-    details: [
-      "Advanced diagnostics and personalized protocols.",
-      "Focused on energy, recovery, prevention, and long-term health.",
-      "Designed for both longevity and peak performance.",
-    ],
+      "Nutrient and hydration infusions selected to support energy, recovery, and hydration, reviewed for appropriateness before every treatment.",
   },
   {
-    slug: "concierge-primary-care",
-    name: "Direct Primary Care",
-    category: "Primary Care",
-    summary:
-      "A direct relationship with your provider, focused on accessibility, continuity, and proactive management of your health, without the limitations of traditional care.",
+    slug: "neurotoxin-injections",
+    name: "Neurotoxin Injections",
+    category: "Aesthetics",
     description:
-      "Personalized care with extended visits, proactive management, and direct-access membership for continuity and convenience.",
-    cta: "Book Now",
-    details: [
-      "Extended visits and proactive management.",
-      "A direct-access membership model for continuity and convenience.",
-      "Focused on accessibility, prevention, and the full picture of your health.",
-    ],
+      "Precision neurotoxin treatments that soften dynamic lines while keeping natural movement and expression intact.",
   },
   {
-    slug: "wellness",
-    name: "Wellness",
-    category: "Wellness",
-    summary:
-      "Supportive wellness services designed to enhance energy, recovery, hydration, and overall vitality.",
+    slug: "dermal-fillers",
+    name: "Dermal Fillers",
+    category: "Aesthetics",
     description:
-      "Supportive wellness services designed to enhance energy, recovery, hydration, and overall vitality.",
-    cta: "Learn More",
-    details: [
-      "Designed to enhance energy, recovery, hydration, and vitality.",
-      "Reviewed for appropriateness and aligned with broader health goals.",
-      "Delivered within a calm, clinically guided care experience.",
-    ],
+      "Filler placed to restore volume and balance facial proportions, with conservative dosing and a plan built around your anatomy.",
+  },
+  {
+    slug: "rf-microneedling",
+    name: "RF Microneedling",
+    category: "Aesthetics",
+    description:
+      "Radiofrequency microneedling to improve skin texture, tone, and firmness by stimulating your skin's own collagen response.",
+  },
+  {
+    slug: "laser-hair-removal",
+    name: "Laser Hair Removal",
+    category: "Aesthetics",
+    description:
+      "Laser treatment that reduces unwanted hair over a series of sessions, with settings tailored to your skin and hair type.",
+  },
+  {
+    slug: "trigger-point-injections",
+    name: "Trigger Point Injections",
+    category: "Pain Management",
+    description:
+      "Targeted injections into tight muscle bands to relieve localized pain and restore range of motion.",
   },
 ];
 
@@ -300,10 +293,46 @@ export const articles: Article[] = [
   },
 ];
 
+const street = "56 Newark Street #2";
+const cityStateZip = "Hoboken, NJ 07030";
+
+export const provider = {
+  name: "Jorge Cruz",
+  credentials: "",
+  blurb:
+    "Double board-certified Nurse Practitioner specializing in primary care, weight management, and preventive medicine.",
+  headshot: "/images/jorge-cruz-headshot.jpeg",
+  headshotAlt: "Jorge Cruz, Nurse Practitioner",
+  quote:
+    "Health isn't built during a single appointment—it's built through a trusted partnership over time.",
+  bio: [
+    {
+      heading: "Background",
+      body: "Jorge is a double board-certified Nurse Practitioner with experience spanning adult primary care, critical care, and weight management. He trained at Georgetown University, where he developed a strong foundation in evidence-based, whole-person care.",
+    },
+    {
+      heading: "Philosophy",
+      body: "After years caring for critically ill and older adults, Jorge recognized how many chronic conditions develop gradually. His approach emphasizes prevention, education, and personalized care before problems become crises.",
+    },
+    {
+      heading: "Why Cura",
+      body: "That philosophy became Cura Health Collective—a practice built around longer visits, direct communication, and individualized care plans that help patients build lasting health.",
+    },
+    {
+      heading: "Beyond the Clinic",
+      body: "Born and raised in Jersey City, Jorge enjoys traveling, exploring local restaurants, and staying curious. That same curiosity shapes how he gets to know patients beyond their charts and partners with them to create meaningful, lasting change.",
+    },
+  ],
+};
+
 export const contactDetails = {
+  street,
+  cityStateZip,
+  location: `${street}, ${cityStateZip}`,
   phone: "551-310-4708",
+  phoneHref: "+15513104708",
   email: "health@cura-hc.com",
-  location: "56 Newark Street #2, Hoboken, NJ 07030",
+  hoursNotes: ["By appointment only.", "Virtual visits available."],
   instagram: "@curahealthcollective",
   instagramHref: "https://www.instagram.com/curahealthcollective/",
 };

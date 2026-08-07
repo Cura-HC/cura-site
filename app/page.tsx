@@ -1,5 +1,6 @@
 import { Button } from "@/components/button";
 import { OfficeFrame } from "@/components/office-frame";
+import { ProviderCard } from "@/components/provider-card";
 import { SectionHeading } from "@/components/section-heading";
 import { heroStats, services } from "@/data/site";
 
@@ -17,8 +18,8 @@ export default function HomePage() {
               At Cura Health Collective, we take a proactive, whole-person approach to primary care. Our practice is built around understanding each patient deeply, addressing the root causes of disease, and providing the ongoing support needed to sustain long-term wellbeing.
             </p>
             <div className="reveal reveal-delay-3 mt-8 flex flex-wrap gap-4">
-              <Button href="/contact">Book an Appointment</Button>
-              <Button href="/what-we-offer" variant="secondary">
+              <Button href="/request-consultation">Request Consultation</Button>
+              <Button href="/services" variant="secondary">
                 Explore Services
               </Button>
             </div>
@@ -49,11 +50,11 @@ export default function HomePage() {
             description="Cura offers direct-access, clinically guided services designed to support sustainable weight loss, metabolic health, recovery, performance, and proactive primary care."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {services.slice(0, 4).map((service) => (
+            {services.filter(service => service.name === "Peptide Therapy" || service.name === "GLP-1 Medical Weight Loss" || service.name === "Neurotoxin Injections" || service.name === "Dermal Fillers").map((service) => (
               <article key={service.slug} className="panel flex h-full flex-col p-6">
                 <p className="text-xs uppercase tracking-[0.22em] text-taupe">{service.category}</p>
                 <h3 className="mt-4 font-serif text-2xl text-charcoal">{service.name}</h3>
-                <p className="mt-4 flex-1 text-sm leading-7 text-charcoal/70">{service.summary}</p>
+                <p className="mt-4 flex-1 text-sm leading-7 text-charcoal/70">{service.description}</p>
                 <Button href="/what-we-offer" variant="secondary" className="mt-6 justify-center">
                   Learn More
                 </Button>
@@ -64,40 +65,34 @@ export default function HomePage() {
       </section>
 
       <section className="section-space">
-        <div className="shell grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-center">
-          <div className="panel p-8 md:p-10">
-            <span className="eyebrow">Direct Primary Care</span>
-            <h2 className="headline-section max-w-2xl">A more direct, attentive relationship between patient and provider.</h2>
+        <div className="shell grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-start">
+          <div className="panel p-8">
+            <span className="eyebrow">Why Cura</span>
+            <h2 className="headline-section max-w-2xl">More time. More access. More personalized care.</h2>
             <div className="mt-6 space-y-4 text-base leading-8 text-charcoal/75">
               <p>
-                Cura creates space for deeper visits, proactive follow-up, and personalized guidance across prevention, metabolic health, recovery, hormones, and everyday wellbeing.
-              </p>
-              <p>
-                The result is a calm, high-touch care experience built on continuity, education, and trust.
+                At Cura, you're never just another appointment. Longer visits, direct communication, and proactive follow-up as allow us to give personalized guidance built on continuity and trust.
               </p>
             </div>
           </div>
-          <OfficeFrame
-            title="Quiet luxury, medical credibility"
-            subtitle="The visual language stays warm and refined rather than cold or overly clinical, helping Cura feel elevated without losing approachability."
-          />
+          <ProviderCard />
         </div>
       </section>
 
-      <section className="section-space">
+      <section className="pb-20 md:pb-24">
         <div className="shell">
           <div className="panel overflow-hidden rounded-[36px] px-8 py-12 md:px-12 md:py-16">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
-                <span className="eyebrow">Book a Consultation</span>
+                <span className="eyebrow">Request Consultation</span>
                 <h2 className="headline-section max-w-3xl">
-                  Start with a conversation that feels calm, clear, and built around your goals.
+                  Ready to take the first step?
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-8 text-charcoal/70">
-                  Whether you are exploring GLP-1 weight loss, hormone support, direct primary care, or a broader wellness plan, Cura offers a personalized first step toward long-term health optimization.
+                  Schedule a consultation to discuss your goals and learn how Cura can support your long-term health.
                 </p>
               </div>
-              <Button href="/contact">Book an Appointment</Button>
+              <Button href="/request-consultation">Request Consultation</Button>
             </div>
           </div>
         </div>
