@@ -33,16 +33,14 @@ function MeetTheProvider() {
             <p className="text-xs uppercase tracking-[0.25em] text-taupe">
               Meet the Provider
             </p>
-            <div className="mt-6 flex min-h-[420px] items-center justify-center rounded-[28px] border border-black/10 bg-[#faf7f2] p-8">
-              <div className="relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-full border border-black/10 bg-white/70 shadow-float">
-                <Image
-                  src="/images/jorge-cruz-headshot.jpeg"
-                  alt="Jorge Cruz, Nurse Practitioner"
-                  fill
-                  sizes="(min-width: 1024px) 46vw, 100vw"
-                  className="object-cover object-[center_20%] transition duration-700"
-                />
-              </div>
+            <div className="relative mt-6 aspect-[4/5] w-full overflow-hidden rounded-[24px] border border-black/10 bg-[#faf7f2]">
+              <Image
+                src={provider.headshot}
+                alt={provider.headshotAlt}
+                fill
+                sizes="(min-width: 1024px) 32vw, 100vw"
+                className="object-cover"
+              />
             </div>
             <h1 className="mt-6 font-serif text-4xl text-charcoal">
               Jorge Cruz
