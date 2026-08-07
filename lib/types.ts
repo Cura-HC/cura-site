@@ -1,18 +1,14 @@
 export type ServiceCategory =
-  | "Weight Loss"
-  | "Wellness"
+  | "Primary Care & Wellness"
   | "Aesthetics"
-  | "Primary Care"
-  | "Membership";
+  | "Pain Management";
 
 export type Service = {
   slug: string;
   name: string;
   category: ServiceCategory;
   description: string;
-  summary: string;
-  details: string[];
-  cta: string;
+  details?: string[]; // consider: average time, price
 };
 
 export type Article = {
