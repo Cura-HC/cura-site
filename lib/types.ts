@@ -1,14 +1,21 @@
 export type ServiceCategory =
-  | "Primary Care & Wellness"
+  | "Medical"
   | "Aesthetics"
-  | "Pain Management";
+  | "Pain Management & Recovery";
 
 export type Service = {
   slug: string;
   name: string;
-  category: ServiceCategory;
+  categories: ServiceCategory[];
   description: string;
+  icon?: string;
+  image?: string;
+  imageAlt?: string;
   details?: string[]; // consider: average time, price
+  founderRate?: {
+    price: string;
+    unit: string;
+  };
 };
 
 export type Article = {
@@ -19,4 +26,16 @@ export type Article = {
   date: string;
   readTime: string;
   body: string[];
+};
+
+export type TeamMember = {
+  slug: string;
+  name: string;
+  title: string;
+  headshot?: string;
+  headshotAlt?: string;
+  headshotPosition?: string;
+  credentials: string[];
+  bio: string[];
+  philosophy?: string;
 };

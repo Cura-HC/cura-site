@@ -35,22 +35,33 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <div className="hidden lg:block">
-          <Button href="/request-consultation">Request Consultation</Button>
+        <div className="flex items-center gap-3">
+          <Button
+            href="/request-consultation"
+            className="hidden lg:inline-flex"
+          >
+            Request Consultation
+          </Button>
+          <Button
+            href="/request-consultation"
+            className="px-4 py-2.5 text-xs lg:hidden"
+          >
+            Book Now
+          </Button>
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 lg:hidden"
+            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
+          >
+            {open ? (
+              <CloseIcon className="h-5 w-5" />
+            ) : (
+              <MenuIcon className="h-5 w-5" />
+            )}
+          </button>
         </div>
-        <button
-          type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 lg:hidden"
-          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((value) => !value)}
-        >
-          {open ? (
-            <CloseIcon className="h-5 w-5" />
-          ) : (
-            <MenuIcon className="h-5 w-5" />
-          )}
-        </button>
       </div>
       {open ? (
         <div className="border-t border-black/10 bg-white/95 lg:hidden">

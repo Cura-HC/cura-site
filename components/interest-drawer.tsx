@@ -34,7 +34,7 @@ export function InterestDrawer() {
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h4 className="text-sm font-medium text-charcoal">{service.name}</h4>
-                  <p className="mt-1 text-xs text-charcoal/55">{service.category}</p>
+                  <p className="mt-1 text-xs text-charcoal/55">{service.categories[0]}</p>
                 </div>
                 <button
                   type="button"
