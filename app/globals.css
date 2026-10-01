@@ -50,6 +50,18 @@ body {
   @apply font-serif text-3xl leading-tight text-charcoal md:text-4xl;
 }
 
+.headline-hero {
+  @apply font-serif text-[2.6rem] leading-[1.06] text-charcoal sm:text-6xl lg:text-[4.25rem];
+}
+
+.kicker {
+  @apply text-[11px] uppercase tracking-[0.3em] text-taupe;
+}
+
+.title-centered {
+  @apply font-serif text-3xl uppercase tracking-[0.12em] text-charcoal/85 sm:text-4xl;
+}
+
 .text-balance {
   text-wrap: balance;
 }
@@ -79,11 +91,41 @@ body {
   background-size: 44px 44px;
 }
 
+.hero-wash {
+  background:
+    radial-gradient(ellipse 60% 70% at 12% 20%, rgba(255, 255, 255, 0.9), transparent 70%),
+    radial-gradient(ellipse 55% 60% at 92% 12%, rgba(197, 158, 148, 0.18), transparent 70%),
+    radial-gradient(ellipse 60% 55% at 78% 100%, rgba(152, 160, 146, 0.16), transparent 70%),
+    linear-gradient(180deg, #f8f3ec 0%, #f3ebe1 100%);
+}
+
 .photo-fallback {
   background:
     linear-gradient(130deg, rgba(247, 241, 234, 0.98), rgba(225, 214, 201, 0.86)),
     radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.85), transparent 26%),
     radial-gradient(circle at 80% 10%, rgba(152, 160, 146, 0.16), transparent 20%);
+}
+
+.plate-deep {
+  background:
+    linear-gradient(150deg, rgba(236, 227, 215, 0.95), rgba(215, 202, 188, 0.9)),
+    radial-gradient(circle at 18% 15%, rgba(255, 255, 255, 0.75), transparent 32%),
+    radial-gradient(circle at 82% 88%, rgba(152, 160, 146, 0.22), transparent 34%);
+}
+
+.halftone {
+  position: relative;
+}
+
+.halftone::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(197, 158, 148, 0.28) 1.4px, transparent 1.5px);
+  background-size: 14px 14px;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 60%, #000 0%, transparent 62%);
+  mask-image: radial-gradient(ellipse at 50% 60%, #000 0%, transparent 62%);
+  pointer-events: none;
 }
 
 .glass-line {

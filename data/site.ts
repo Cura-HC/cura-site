@@ -1,4 +1,4 @@
-import { Article, Service } from "@/lib/types";
+import { Article, Service, TeamMember } from "@/lib/types";
 
 export const navLinks = [
   { href: "/", label: "Home" },
@@ -6,24 +6,6 @@ export const navLinks = [
   { href: "/services", label: "Services" },
   // { href: "/education", label: "Education" },
   { href: "/contact", label: "Contact" },
-];
-
-export const heroStats = [
-  {
-    value: "Deep-Dive Consultations",
-    label:
-      "Comprehensive evaluations focused on root causes, not just symptoms.",
-  },
-  {
-    value: "Direct Provider Access",
-    label:
-      "Ongoing guidance, proactive follow-up, and real-time support when you need it.",
-  },
-  {
-    value: "Data-Driven Care",
-    label:
-      "Advanced labs, metabolic insights, and personalized protocols designed for long-term results.",
-  },
 ];
 
 export const featuredReasons = [
@@ -49,74 +31,108 @@ export const featuredReasons = [
   },
 ];
 
+export const founderRatesEndDate = "October 31";
+
 export const services: Service[] = [
-  {
-    slug: "concierge-primary-care",
-    name: "Direct Primary Care Membership",
-    category: "Primary Care & Wellness",
-    description:
-      "A membership-based relationship with your provider built on extended visits, direct access, and proactive management of your long-term health.",
-  },
   {
     slug: "glp-1-medical-weight-loss",
     name: "GLP-1 Medical Weight Loss",
-    category: "Primary Care & Wellness",
+    categories: ["Medical"],
+    icon: "/images/service-icons/glp-1-medical-weight-loss.png",
+    image: "/images/services/glp-1-medical-weight-loss.jpg",
+    imageAlt: "A glass of water on a white table in bright sunlight",
     description:
       "Clinically supervised weight loss using GLP-1 therapy, paired with metabolic support and ongoing follow-up. Telemedicine visits available.",
   },
   {
-    slug: "longevity-preventative-medicine",
-    name: "Longevity & Performance Medicine",
-    category: "Primary Care & Wellness",
-    description:
-      "Advanced diagnostics and personalized protocols focused on energy, recovery, prevention, and long-term health.",
-  },
-  {
     slug: "peptides",
     name: "Peptide Therapy",
-    category: "Primary Care & Wellness",
+    categories: ["Medical", "Pain Management & Recovery"],
+    icon: "/images/service-icons/peptides.png",
+    image: "/images/services/peptides.jpg",
+    imageAlt: "A glass dropper releasing serum into an amber bottle",
     description:
       "Clinically guided peptide protocols designed to support recovery, optimize performance, and enhance cellular health. Selected based on your goals and physiology.",
   },
   {
+    slug: "concierge-primary-care",
+    name: "Direct Primary Care Membership",
+    categories: ["Medical"],
+    icon: "/images/service-icons/concierge-primary-care.png",
+    image: "/images/services/concierge-primary-care.jpg",
+    imageAlt: "A stethoscope on a pale blue background",
+    description:
+      "A membership-based relationship with your provider built on extended visits, direct access, and proactive management of your long-term health.",
+  },
+  {
+    slug: "longevity-preventative-medicine",
+    name: "Longevity & Performance Medicine",
+    categories: ["Medical"],
+    description:
+      "Advanced diagnostics and personalized protocols focused on energy, recovery, prevention, and long-term health.",
+  },
+  {
+    slug: "hormone-replacement-therapy",
+    name: "Hormone Replacement Therapy",
+    categories: ["Medical"],
+    description:
+      "Lab-guided hormone optimization for men and women, with individualized dosing and ongoing monitoring to support energy, mood, and long-term health.",
+  },
+  {
     slug: "iv-vitamin-therapy",
     name: "IV & Vitamin Therapy",
-    category: "Primary Care & Wellness",
+    categories: ["Medical"],
     description:
       "Nutrient and hydration infusions selected to support energy, recovery, and hydration, reviewed for appropriateness before every treatment.",
   },
   {
     slug: "neurotoxin-injections",
     name: "Neurotoxin Injections",
-    category: "Aesthetics",
+    categories: ["Aesthetics"],
+    icon: "/images/service-icons/neurotoxin-injections.png",
+    image: "/images/services/neurotoxin-injections.jpg",
+    imageAlt: "A smiling woman with natural, freckled skin resting her chin on her arms",
     description:
       "Precision neurotoxin treatments that soften dynamic lines while keeping natural movement and expression intact.",
+    founderRate: { price: "$10", unit: "per unit" },
   },
   {
     slug: "dermal-fillers",
     name: "Dermal Fillers",
-    category: "Aesthetics",
+    categories: ["Aesthetics"],
+    icon: "/images/service-icons/dermal-fillers.png",
+    image: "/images/services/dermal-fillers.jpg",
+    imageAlt: "Two drops of clear gel overlapping on a soft peach background",
     description:
       "Filler placed to restore volume and balance facial proportions, with conservative dosing and a plan built around your anatomy.",
+    founderRate: { price: "$399", unit: "per syringe" },
   },
   {
     slug: "rf-microneedling",
     name: "RF Microneedling",
-    category: "Aesthetics",
+    categories: ["Aesthetics"],
+    icon: "/images/service-icons/rf-microneedling.png",
+    image: "/images/services/rf-microneedling.jpg",
+    imageAlt: "Close-up of rose-pink bubbles suspended in clear liquid",
     description:
       "Radiofrequency microneedling to improve skin texture, tone, and firmness by stimulating your skin's own collagen response.",
+    founderRate: { price: "$899", unit: "for 3 sessions" },
   },
   {
     slug: "laser-hair-removal",
     name: "Laser Hair Removal",
-    category: "Aesthetics",
+    categories: ["Aesthetics"],
+    icon: "/images/service-icons/laser-hair-removal.png",
+    image: "/images/services/laser-hair-removal.jpg",
+    imageAlt: "Smooth bare legs in dappled sunlight beneath a white eyelet skirt",
     description:
       "Laser treatment that reduces unwanted hair over a series of sessions, with settings tailored to your skin and hair type.",
+    founderRate: { price: "From $250", unit: "for 6 sessions · small areas" },
   },
   {
     slug: "trigger-point-injections",
     name: "Trigger Point Injections",
-    category: "Pain Management",
+    categories: ["Pain Management & Recovery"],
     description:
       "Targeted injections into tight muscle bands to relieve localized pain and restore range of motion.",
   },
@@ -296,34 +312,77 @@ export const articles: Article[] = [
 const street = "56 Newark Street #2";
 const cityStateZip = "Hoboken, NJ 07030";
 
-export const provider = {
-  name: "Jorge Cruz",
-  credentials: "",
-  blurb:
-    "Double board-certified Nurse Practitioner specializing in primary care, weight management, and preventive medicine.",
-  headshot: "/images/jorge-cruz-headshot.jpeg",
-  headshotAlt: "Jorge Cruz, Nurse Practitioner",
-  quote:
-    "Health isn't built during a single appointment—it's built through a trusted partnership over time.",
-  bio: [
-    {
-      heading: "Background",
-      body: "Jorge is a double board-certified Nurse Practitioner with experience spanning adult primary care, critical care, and weight management. He trained at Georgetown University, where he developed a strong foundation in evidence-based, whole-person care.",
-    },
-    {
-      heading: "Philosophy",
-      body: "After years caring for critically ill and older adults, Jorge recognized how many chronic conditions develop gradually. His approach emphasizes prevention, education, and personalized care before problems become crises.",
-    },
-    {
-      heading: "Why Cura",
-      body: "That philosophy became Cura Health Collective—a practice built around longer visits, direct communication, and individualized care plans that help patients build lasting health.",
-    },
-    {
-      heading: "Beyond the Clinic",
-      body: "Born and raised in Jersey City, Jorge enjoys traveling, exploring local restaurants, and staying curious. That same curiosity shapes how he gets to know patients beyond their charts and partners with them to create meaningful, lasting change.",
-    },
-  ],
-};
+export const team: TeamMember[] = [
+  {
+    slug: "jorge-cruz",
+    name: "Jorge Cruz",
+    title: "Co-Founder & Nurse Practitioner",
+    headshot: "/images/jorge.jpeg",
+    headshotAlt: "Jorge Cruz, Co-Founder & Nurse Practitioner",
+    credentials: [
+      "MSN, APRN, ACNPC-AG, A-GNP-C",
+      "Trained at Georgetown University",
+      "Experience in adult primary and criitcal care, medical weight management, and preventive longevity medicine",
+    ],
+    bio: [
+      "Jorge is a double board-certified Nurse Practitioner with experience spanning adult primary care, critical care, and weight management. He trained at Georgetown University, where he developed a strong foundation in evidence-based, whole-person care.",
+      "After years caring for critically ill and older adults, Jorge recognized how many chronic conditions develop gradually. His approach emphasizes prevention, education, and personalized care before problems become crises.",
+      "That philosophy became Cura Health Collective—a practice built around longer visits, direct communication, and individualized care plans that help patients build lasting health.",
+      "A Jersey City local, Jorge enjoys traveling, exploring local restaurants, and staying curious. That same curiosity shapes how he gets to know patients beyond their charts and partners with them to create meaningful, lasting change."
+    ],
+  },
+  {
+    slug: "sofia-benavides",
+    name: "Sofia Benavides",
+    title: "Aesthetic Nurse Practitioner",
+    headshot: "/images/sofia.jpeg",
+    headshotAlt: "Sofia Benavides, Aesthetic Nurse Practitioner",
+    headshotPosition: "left center",
+    credentials: [
+      "FNP-BC",
+      "Board-certified Family Nurse Practitioner",
+      "Aesthetic Nurse Practitioner",
+    ],
+    bio: [
+      "Sofia Benavides is dedicated to helping you look and feel your best through personalized, evidence-based care. With a passion for aesthetics, wellness, and patient-centered medicine, Sofia’s goal is to create natural, confident results while making every patient feel heard, cared for, and empowered.",
+    ],
+  },
+  {
+    slug: "gianna-bove",
+    name: "Gianna Bove",
+    title: "Aesthetic RN Injector",
+    headshot: "/images/gianna.jpeg",
+    headshotAlt: "Gianna Bove, Aesthetic RN Injector",
+    credentials: [
+      "MSN, RN",
+      "Aesthetic Registered Nurse and Injector",
+      "10 years of nursing experience in cardiac and intensive care",
+    ],
+    bio: [
+      "Gianna brings 10 years of nursing experience to aesthetics, including four years in cardiac nursing followed by several years in intensive care. Her clinical background has shaped a thoughtful, detail-oriented approach to patient care, with a strong emphasis on safety, education, and making patients feel comfortable and informed throughout their treatment.",
+      "Gianna’s approach to aesthetics is centered on enhancing rather than changing. She believes the best results should feel refined, balanced, and natural, helping patients look refreshed while still looking like themselves.",
+      "At Cura, Gianna is passionate about creating individualized treatment plans based on each patient’s features, concerns, and goals. She values taking the time to listen, educate, and develop a plan that never feels one-size-fits-all.",
+      "Outside of clinical practice, Gianna enjoys traveling, cooking, spending time with her family, and all things beauty, fashion, and wellness.",
+    ],
+  },
+  {
+    slug: "therese-cruz",
+    name: "Therese Cruz",
+    title: "Aesthetic RN Injector",
+    headshot: "/images/therese.jpeg",
+    headshotAlt: "Therese Cruz, Aesthetic RN Injector",
+    credentials: [
+      "BSN, RN",
+      "Aesthetic Registered Nurse and Injector",
+      "Experience in emergency and post-anesthesia care nursing",
+    ],
+    bio: [
+      "Therese is a registered nurse with experience in emergency room nursing and post-anesthesia care. She brings a strong clinical foundation and a passion for aesthetics to her practice, with an emphasis on safety, patient education, and individualized care.",
+      "She views skin health as the foundation of aesthetic care, believing that healthy, well-cared-for skin allows aesthetic treatments to complement rather than change a person’s natural features. Her approach focuses on refined, balanced results that help each patient feel confident while remaining authentically themselves.",
+      "Outside of clinical practice, Therese enjoys spending time with her dog, Ralphie, as well as fine dining, comedy, beauty, and wellness.",
+    ],
+  },
+];
 
 export const contactDetails = {
   street,
@@ -341,5 +400,77 @@ export const socialLinks = [
   {
     label: "Instagram: @curahealthcollective",
     href: "https://www.instagram.com/curahealthcollective/",
+  },
+];
+
+export const aboutStory = [
+  {
+    id: "collective",
+    title: "The Collective",
+    image: "/images/cura-details.jpeg",
+    imageAlt: "A Cura Health Collective business card on a wooden shelf beside dried pampas grass",
+    imagePosition: "50% 72%",
+    body: [
+      "We created CURA as a modern collective where medicine, aesthetics, wellness, and longevity come together under one roof. Rather than separating health from confidence or prevention from beauty, we recognize that they are all connected. When you feel healthy, you live differently. When you feel confident, you show up differently. Our mission is to support both.",
+      "Our team combines evidence-based medicine with advanced aesthetic treatments and personalized wellness strategies to create care that is proactive, individualized, and designed around your goals. Whether you’re managing your health, optimizing performance, restoring confidence, or investing in longevity, every recommendation is tailored specifically to you.",
+    ],
+  },
+  {
+    id: "care",
+    title: "Thoughtful Care",
+    plate: {
+      kicker: "From our provider",
+      display:
+        "Health isn’t built during a single appointment—it’s built through a trusted partnership over time.",
+      caption: "Jorge Cruz, NP",
+    },
+    body: [
+      "At CURA, you’ll find services that span direct primary care, medical weight management, hormone optimization, peptide therapy, IV therapy, longevity medicine, and aesthetic treatments including neurotoxins, dermal fillers, RF microneedling, and laser hair removal. While our services are diverse, our philosophy remains the same: thoughtful care that addresses the whole person.",
+    ],
+  },
+];
+
+export const homeStory = [
+  {
+    id: "the-collective",
+    eyebrow: "The Collective",
+    title: "A different kind of practice",
+    plate: {
+      kicker: "Under one roof",
+      display: "Medicine, aesthetics, wellness, and longevity",
+      caption: "Hoboken, NJ",
+    },
+    body: [
+      "We created Cura as a modern collective where medicine, aesthetics, wellness, and longevity come together rather than sitting in separate silos.",
+      "When you feel healthy, you live differently. When you feel confident, you show up differently. Our practice is built to support both at once.",
+    ],
+  },
+  {
+    id: "the-method",
+    eyebrow: "Our approach",
+    title: "The Cura Method",
+    plate: {
+      kicker: "How care unfolds",
+      display: "Discover. Assess. Personalize. Treat. Optimize.",
+      caption: "Five steps, one continuous relationship",
+    },
+    body: [
+      "We begin with a thoughtful conversation about your goals, symptoms, and day-to-day life, then review the history, diagnostics, and patterns shaping your baseline.",
+      "From there your plan is built around your priorities and physiology rather than a preset protocol, and refined over time through monitoring, education, and proactive next steps.",
+    ],
+  },
+  {
+    id: "longevity",
+    eyebrow: "Prevention & longevity",
+    title: "Care that looks ahead",
+    plate: {
+      kicker: "cu·ra — Latin",
+      display: "care for the whole person",
+      caption: "The origin of our name",
+    },
+    body: [
+      "Many chronic conditions develop quietly, years before they are diagnosed. We look for those patterns early and address them while change is still simple.",
+      "Medicine, aesthetics, wellness, and longevity sit under one roof at Cura, because how you feel and how you show up are part of the same picture.",
+    ],
   },
 ];

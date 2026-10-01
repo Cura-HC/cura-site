@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { InterestProvider } from "@/components/interest-provider";
+import { BookingBar } from "@/components/booking-bar";
 
 const sans = Manrope({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <SiteHeader />
           {children}
           <SiteFooter />
+          <BookingBar />
         </InterestProvider>
       </body>
     </html>

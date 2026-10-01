@@ -3,7 +3,7 @@ import { contactDetails, navLinks, socialLinks } from "@/data/site";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-black/10 bg-[#f2ece3]">
+    <footer className="border-t border-black/10 bg-[#f2ece3] pb-20 lg:pb-0">
       <div className="shell grid gap-12 py-16 lg:grid-cols-[1.3fr_0.8fr_0.9fr_0.9fr]">
         <div>
           <Link href="/" className="font-serif text-3xl tracking-[0.08em] text-charcoal">
@@ -11,9 +11,6 @@ export function SiteFooter() {
           </Link>
           <p className="mt-5 max-w-sm text-sm leading-7 text-charcoal/70">
             Concierge medicine and modern wellness care designed around access, prevention, aesthetics, and long-term health optimization.
-          </p>
-          <p className="mt-5 max-w-sm text-sm leading-7 text-charcoal/70">
-            Cura Health Collective, PC currently serves patients located in New Jersey.
           </p>
         </div>
         <div>
