@@ -46,6 +46,20 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
+      <div className="shell flex flex-col gap-2 border-t border-black/10 py-6 text-xs text-charcoal/55 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; {new Date().getFullYear()} Cura Health Collective, PC</p>
+        <p>
+          Website by{" "}
+          <a
+            href="https://www.linkedin.com/in/diana-ngo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-charcoal/30 underline-offset-4 transition hover:text-charcoal hover:decoration-charcoal"
+          >
+            Diana
+          </a>
+        </p>
+      </div>
     </footer>
   );
 }
