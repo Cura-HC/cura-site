@@ -322,7 +322,7 @@ export const team: TeamMember[] = [
     credentials: [
       "MSN, APRN, ACNPC-AG, A-GNP-C",
       "Trained at Georgetown University",
-      "Experience in adult primary and criitcal care, medical weight management, and preventive longevity medicine",
+      "Experience in adult primary and critical care, medical weight management, and preventive longevity medicine",
     ],
     bio: [
       "Jorge is a double board-certified Nurse Practitioner with experience spanning adult primary care, critical care, and weight management. He trained at Georgetown University, where he developed a strong foundation in evidence-based, whole-person care.",
